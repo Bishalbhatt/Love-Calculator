@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Love Calculator</title>
+    <!--Bootstrap css-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!--Custom css-->
+    <link rel="stylesheet" href="love.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#"><b><i>LOVE CALCULATOR</i></b></a>
+  </button>
+  <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+
+  </div>
+</nav>
+<div class="frm jumbotron">
+      <form>
+        Your First Name:<br><input type="text" name="Yname" id="Fname"><br>
+        Patner's First Name:<br><input type="text" name="Pname" id="Pname"><br><br>
+        <button class="btn btn-primary btt" type="button" onclick="myFunction()">Calculate</button>
+      </form>
+</div>
+<div class="image">
+  <div class="row">
+    <div class="col-md-3">
+       <img src="https://i.ebayimg.com/images/g/7dUAAOSwe7BWt0cw/s-l300.jpg">
+    </div>
+    <div class="col-md-3">
+       <img src="https://i.ebayimg.com/images/g/7dUAAOSwe7BWt0cw/s-l300.jpg">
+    </div>
+    <div class="col-md-3">
+       <img src="https://i.ebayimg.com/images/g/7dUAAOSwe7BWt0cw/s-l300.jpg">
+    </div>
+    <div class="col-md-3">
+       <img src="https://i.ebayimg.com/images/g/7dUAAOSwe7BWt0cw/s-l300.jpg">
+    </div>
+  </div>
+</div>
+  <!--Bootstrap js-->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <!--Custom js-->
+  <script type="text/javascript">
+    function myFunction(){
+   var str1=document.getElementById("Fname").value;
+   var str2=document.getElementById("Pname").value;
+   var sum=0,i,tot=0,j;
+   for(i=0;i<str1.length;i++){
+     var n=str1.charCodeAt(i);
+     sum=sum+n;
+   }
+   for(j=0;j<str2.length;j++){
+     var n=str2.charCodeAt(j);
+     tot=tot+n;
+   }
+   var result=Math.round((sum+tot)/15);
+   if(str1=="Ankur" && str2=="Shivangi")
+   {
+     alert("Your result percentage=0");
+   }
+   else if(result>100){
+     alert("Your love percentage=80");
+   }
+   else{
+     alert("Your love Percentage="+result);
+   }
+ }
+
+  </script>
+  </body>
+</html>
